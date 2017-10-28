@@ -1,4 +1,5 @@
 clean:
+  desc: Clean generated artifacts
   cmds:
     - rm -f *.snap
     - rm -rf parts
@@ -7,5 +8,6 @@ clean:
     - rm -rf snap/.snapcraft
 
 build:
+  desc: Build Snap package
   cmds:
     - snapcraft
