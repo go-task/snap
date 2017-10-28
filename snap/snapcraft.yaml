@@ -8,13 +8,14 @@ description: |
 
 grade: stable
 confinement: classic
+architectures:
+  - amd64
 
 parts:
   task:
-    source: https://github.com/go-task/task.git
-    plugin: go
-    go-importpath: github.com/go-task/task
+    plugin: dump
+    source: https://github.com/go-task/task/releases/download/v1.4.3/task_linux_amd64.tar.gz
 
 apps:
   task:
-    command: bin/task
+    command: task
