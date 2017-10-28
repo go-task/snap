@@ -1,0 +1,11 @@
+clean:
+  cmds:
+    - rm -f *.snap
+    - rm -rf parts
+    - rm -rf prime
+    - rm -rf stage
+    - rm -rf snap/.snapcraft
+
+build:
+  cmds:
+    - snapcraft

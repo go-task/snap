@@ -1,0 +1,20 @@
+name: task
+version: '1.4.3'
+summary: A task runner / simpler Make alternative written in Go
+description: |
+  Task is a simple tool that allows you to easily run development and build
+  tasks. Task is written in Golang, but can be used to develop any language.
+  It aims to be simpler and easier to use then GNU Make.
+
+grade: stable
+confinement: classic
+
+parts:
+  task:
+    source: https://github.com/go-task/task.git
+    plugin: go
+    go-importpath: github.com/go-task/task
+
+apps:
+  task:
+    command: bin/task
