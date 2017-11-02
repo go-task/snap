@@ -8,13 +8,24 @@ description: |
 
 grade: stable
 confinement: classic
-architectures:
-  - amd64
 
 parts:
   task:
-    plugin: dump
-    source: https://github.com/go-task/task/releases/download/v1.4.3/task_linux_amd64.tar.gz
+    plugin: nil
+    build: |
+      set -x
+
+      if [ "$(arch)" = "x86_64" ]; then
+        ARCH=amd64
+      elif [ "$(arch)" = "i686" ]; then
+        ARCH=386
+      else
+        echo "$(arch) not supported"
+        exit 1
+      fi
+
+      URL="https://github.com/go-task/task/releases/download/$SNAPCRAFT_PROJECT_VERSION/task_linux_$ARCH.tar.gz"
+      curl -Lo- "$URL" | tar -C $SNAPCRAFT_PART_INSTALL -zxvf -
 
 apps:
   task:
