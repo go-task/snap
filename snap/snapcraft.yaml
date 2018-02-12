@@ -12,6 +12,8 @@ confinement: classic
 parts:
   task:
     plugin: nil
+    build-packages:
+      - curl
     build: |
       set -x
 
