@@ -15,23 +15,10 @@ architectures:
 
 parts:
   task:
-    plugin: nil
-    build-packages:
-      - curl
-    build: |
-      set -x
-
-      if [ "$(arch)" = "x86_64" ]; then
-        ARCH=amd64
-      elif [ "$(arch)" = "i686" ]; then
-        ARCH=386
-      else
-        echo "$(arch) not supported"
-        exit 1
-      fi
-
-      URL="https://github.com/go-task/task/releases/download/$SNAPCRAFT_PROJECT_VERSION/task_linux_$ARCH.tar.gz"
-      curl -Lo- "$URL" | tar -C $SNAPCRAFT_PART_INSTALL -zxvf -
+    plugin: dump
+    source:
+      - on amd64: https://github.com/go-task/task/releases/download/$SNAPCRAFT_PROJECT_VERSION/task_linux_AMD64.tar.gz
+      - on i386: https://github.com/go-task/task/releases/download/$SNAPCRAFT_PROJECT_VERSION/task_linux_386.tar.gz
 
 apps:
   task:
