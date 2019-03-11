@@ -17,7 +17,7 @@ parts:
   task:
     plugin: dump
     source:
-      - on amd64: https://github.com/go-task/task/releases/download/$SNAPCRAFT_PROJECT_VERSION/task_linux_AMD64.tar.gz
+      - on amd64: https://github.com/go-task/task/releases/download/$SNAPCRAFT_PROJECT_VERSION/task_linux_amd64.tar.gz
       - on i386: https://github.com/go-task/task/releases/download/$SNAPCRAFT_PROJECT_VERSION/task_linux_386.tar.gz
 
 apps:
