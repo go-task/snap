@@ -1,5 +1,5 @@
 name: task
-version: v3.2.2
+version: v3.3.0
 summary: A task runner / simpler Make alternative written in Go
 description: |
   Task is a simple tool that allows you to easily run development and build
