@@ -8,7 +8,7 @@ description: |
   It aims to be simpler and easier to use then GNU Make.
 license: MIT
 
-base: core18
+base: core20
 grade: stable
 confinement: classic
 
