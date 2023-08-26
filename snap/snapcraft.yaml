@@ -1,5 +1,5 @@
 name: task
-version: v3.28.0
+version: v3.29.1
 title: Task
 summary: A task runner / simpler Make alternative written in Go
 description: |
