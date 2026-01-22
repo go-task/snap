@@ -8,14 +8,19 @@ description: |
   It aims to be simpler and easier to use then GNU Make.
 license: MIT
 
-base: core20
+base: bare
 grade: stable
 confinement: classic
 
-architectures:
-  - build-on: amd64
-  - build-on: armhf
-  - build-on: arm64
+build-base: core24
+
+platforms:
+  amd64:
+    build-on: amd64
+  arm64:
+    build-on: arm64
+  armhf:
+    build-on: armhf
 
 parts:
   task:
